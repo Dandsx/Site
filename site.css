@@ -1,0 +1,240 @@
+body, h1, h2, ul, li, p, dd, dt, dl {
+    margin: 0px;
+    padding: 0px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    /*background-image: url('IMG/fundo2.jpg');*/
+    background-size:cover;
+    background-repeat: no-repeat; 
+    color: rgb(0, 0, 0);
+    -webkit-font-smoothing: antialiased;
+    display: grid;
+    grid-template-columns: 1fr 120px minmax(300px, 800px) 1fr;
+}
+
+.menu {
+    grid-column: 2 / 5;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background: #07ad41;
+}
+
+.menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.menu li a {
+    display: block;
+    padding: 10px;
+    margin-right: 1opx;
+    color:rgb(255, 255, 255);
+    text-decoration: none;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    letter-spacing: .1em;
+}
+
+.grid-section {
+    grid-column: 2 / 4;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 200px 400px 1fr;
+    grid-gap: 20px;
+    margin-bottom: 4rem;
+}
+
+.titulo {
+    grid-column: 1 / 4;
+    max-width:500px;
+    width: auto;
+     
+}
+
+.thesimsdescriçao h2 {
+    font-family: 'IBM Plex Mono' , monospace;
+    color: #13acf3;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    margin-bottom: 1rem;
+    
+}
+
+.thesimsdescriçao h2::before {
+    content: '';
+    display: inline-block;
+    width: 40px;
+    height: 10px;
+    margin-right: 10px;
+    background-color: #79c223;  
+}
+
+.thesimsdescriçao p {
+    font-family: helvetica, arial;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.lista-opcao {
+    height: 300px;
+    overflow-y: scroll;
+}
+
+.lista-opcao::-webkit-scrollbar {
+    width: 18px;
+}
+
+.lista-opcao::-webkit-scrollbar-thumb {
+    background: #79c223;
+    border-left: 4px solid #79c223;
+    border-right: 4px solid #79c223;
+}
+
+.lista-opcao::-webkit-scrollbar-track {
+    background: #ffffff;
+   
+}
+
+.thesimsdescriçao {
+    grid-column: 2;
+}
+
+.thesimsdescriçao section {
+    margin-bottom: 3rem;
+
+}
+
+.perguntas {
+    grid-column: 2 / 4;
+}
+
+.titulo-lista {
+    font-family: 'IBM Plex Mono' , monospace;
+    color: #07ad41;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    margin-bottom: 1rem;
+    
+}
+
+.perguntas dt {
+    font-family: 'IBM Plex Mono' , monospace;
+    color: #13acf3;
+    font-weight: bold;
+    margin-top: 2rem;
+    margin-bottom:  .5rem;
+}
+
+.perguntas dt::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 10px;
+    margin-right: 10px;
+    background-color: #79c223;
+}
+
+.perguntas dd {
+    font-family: Helvetica, Arial;
+    margin-bottom: .5rem;
+    margin-left: 30px;
+}
+.contato {
+    grid-column: 2 / 4;
+}
+
+.titulo-contato {
+    font-family: 'IBM Plex Mono' , monospace;
+    color: #07ad41;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-top: 2rem;
+    letter-spacing: .1em;
+    margin-bottom: 1rem;
+    
+    
+}
+
+.dados-lista {
+    margin-bottom: .5rem;
+    font-family: 'IBM Plex Mono' , monospace;
+    color: #13acf3;
+    font-weight: bold;
+    margin-top: 2rem;
+    
+}
+
+.dados-lista ::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 10px;
+    margin-right: 10px;
+    background-color: #79c223;
+}
+
+.copy {
+    grid-column: 2 / 4;
+    margin-bottom: 2rem;
+    background: #07ad41;
+}
+
+.copy p {
+    padding: 20px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: bold;
+    
+
+}
+
+@media (max-width: 700px) {
+    body {
+        grid-template-columns: 1fr;
+    }
+    .menu, .grid-section, .copy {
+        grid-column: 1;
+    }
+
+    .grid-section {
+        grid-template-columns: 100px 1fr;
+        grid-gap: 10px;
+    }
+
+    .lista-opcao {
+        grid-column: 1;
+    }
+
+    .perguntas, .contato {
+        grid-column: 1 / 3;
+        margin-left: 10px;
+    }
+
+    .menu {
+        margin-top: 0px;
+    }
+
+    .copy {
+        margin-bottom: 0px;
+    }
+
+}
